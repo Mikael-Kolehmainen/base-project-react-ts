@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import Home from "./routes/home/home.component";
+import PrivateRoute from "./routes/privateRoute.component";
+import Error from "./routes/error/error.component";
 
-function App() {
-  const [count, setCount] = useState(0)
+/*
+  This is the main file of the application, in here I have created a routing system.
+  The routing system will determine based on the url which page should be shown.
+  The pages are stored in separate files under the ./routes folder.
+*/
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="*"
+        element={<Error title="404 Not Found" message="The page you're looking for doesn't exist." url="/" />}
+      />
 
-export default App
+      {/* Example of private route */}
+      <Route path="/private" element={<PrivateRoute component={() => <></>} />} />
+    </Routes>
+  );
+};
+
+export default App;
