@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+<h1>base-project-react-ts</h1>
+<h2>About</h2>
+<p style='font-size: 16px; text-align: justify; text-justify: inter-word;'>
+  This is my foundation for all my React web projects. It's written in TypeScript
+  and also includes the backend in the same application for simplicity. I have
+  also added comments to the code. Prettier is configured to work in this application.
+  This README file also serves as a template for my other projects.
+</p>
+<h2>Usage</h2>
+<p style='font-size: 16px; text-align: justify; text-justify: inter-word;'>
+  When I start a new React project, I copy these files which gives the project a nice
+  structure and efficienncy when starting a new project. Then I'll install the packages
+  and start it up. Then I can easily start working on the project with a clean and
+  familiar structure that I enjoy using.
+</p>
+<h2>Project Languages</h2>
+<ul style='font-size 16px;'>
+  <li>TypeScript</li>
+  <li>CSS3</li>
+</ul>
+<h2>Project Libraries</h2>
+<ul style='font-size: 16px;'>
+  <li>Node v20.12.2</li>
+  <li>Check package.json...</li>
+</ul>
