@@ -20,6 +20,6 @@
 </ul>
 <h2>Project Libraries</h2>
 <ul style='font-size: 16px;'>
-  <li>Node v20.12.2</li>
+  <li>Node v22.15.0</li>
   <li>Check package.json...</li>
 </ul>

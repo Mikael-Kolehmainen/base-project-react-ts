@@ -6,6 +6,9 @@ import "./theme.css";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "./store/store.ts";
+import { applyTheme, theme } from "./theme.ts";
+
+applyTheme(theme);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
