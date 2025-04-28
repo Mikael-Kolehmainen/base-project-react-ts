@@ -1,5 +1,5 @@
 import { MouseEventHandler } from "react";
-import { IconContainer, StyledIcon } from "./icon.styles";
+import styles from "./icon.module.css";
 
 interface IconProps {
   iconPath: string;
@@ -8,9 +8,9 @@ interface IconProps {
 
 const Icon = ({ iconPath, onClick }: IconProps) => {
   return (
-    <IconContainer className="icon" onClick={onClick}>
-      <StyledIcon iconPath={iconPath} />
-    </IconContainer>
+    <div className={styles.iconContainer} onClick={onClick}>
+      <i className={styles.icon} style={{ background: `url(${iconPath})` }} />
+    </div>
   );
 };
 
